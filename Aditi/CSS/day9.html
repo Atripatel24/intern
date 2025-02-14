@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .main{
+            /* normal position */
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            margin: 50px;
+            transition: 3s;
+        }
+        .main:hover{
+            /*
+            transform: scaleX(0.5);
+            transform: skew(30deg , 50deg);
+            ( scaleX , skewX , skewY , scaleY , translateX , translateY  )
+            transform: matrix(2, 0.5, 0.5, 2, 0, 0);
+            transform: translate(50px , 50px);
+            transform: translateY(-70px);
+            transform: rotate(180deg);
+            */
+            transform: scale(2 , 0.5);
+        }
+
+        .animediv{
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            margin: 20px;
+            animation-name: anime ;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-direction: alternate-reverse;
+            position: relative;
+        }
+
+        @keyframes anime {
+            /*
+            0%{ background-color: seagreen; left: 0; top:0}
+            25%{background-color: skyblue;left:300px;top: 0;}
+            50%{background-color: yellow;left:300px;top:300px;}
+            75%{background-color: green;left:0;top:300px;}
+            100%{background-color: tomato;left:0;top:0}
+            */
+            0%{}
+            50%{transform: rotate(180deg);}
+            100%{}
+        }
+
+    </style>    
+</head>
+<body>
+    
+    <!-- <div class="main"></div> -->
+
+    <div class="animediv"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promises</h1>
+</body>
+<script>
+
+    let timefunction = () =>{
+        setTimeout(()=>{
+            console.log("function call");
+        },5000)
+    }
+    timefunction()
+
+    let data = new Promise((resolve,reject)=>{
+
+        let i = 3
+        if(i < 2){
+            resolve("success")
+        }else{
+            reject("fail1234")
+        }
+    })
+
+    data.then((message)=>{
+        console.log("resolve :",message);
+    }).catch((error)=>{
+        console.log("reject :",error);
+    })
+
+
+    let data1 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("first")
+        },3000)
+    })
+
+    let data2 = new Promise((resolve,reject)=>{
+        resolve("second")
+    })
+
+    console.log(data);
+
+    let fun = async() =>{
+        await data1
+        console.log("after");
+        await data2
+        console.log("last");
+    }
+    fun()
+
+</script>
+</html>

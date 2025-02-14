@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            color: brown;
+        }
+        .c2{
+            background-color: wheat;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM (document object model)</h1>
+    <!-- <p id="i1" onmouseenter="singleclick()"></p> -->
+    <!-- <p class="c1" onmouseleave="singleclick()"></p> -->
+    <p id="w1"></p>
+
+    <p id="style"></p>
+
+    <button id="button1" >click</button>
+
+    <button onclick="singleclick()">single click</button>
+
+    <button ondblclick="singleclick()">double</button>
+
+    <input type="text" onchange="change()" placeholder="change">
+    <input type="text" onkeypress="change()" placeholder="key">
+
+
+
+<script>
+    
+    let change = () => {
+        alert("change event work")
+    }
+    
+    document.getElementById("i1").innerHTML = "<h1>hello</h1>"
+   
+    document.getElementsByClassName("c1")[0].innerHTML = "class element"
+
+    document.getElementById("w1").innerText = "<h1>innertext</h1>"
+
+    document.getElementsByTagName("p")[3].innerHTML = "tag change"
+
+    document.querySelector(".c1").innerHTML = "queryselector"
+
+    document.getElementById("style").style.backgroundColor = "red"
+
+    document.getElementsByClassName("c1")[0].classList.add("c2")
+
+    document.getElementById("button1").addEventListener("dblclick",()=>{alert("you are click")})
+
+
+    function singleclick(){
+        alert("you are click single time")
+    }
+
+
+
+</script>
+</html>

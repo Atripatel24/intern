@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h1{
+            font-size: xx-large;
+        }
+
+        .st1{
+            background-color: beige;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM ( Document Object Model) </h1>
+
+    <p id="p1"></p>
+
+    <p class="c1" ></p>
+    <p class="c1"></p>
+    <!-- <p class="c1"></p>
+    <p class="c1"></p> -->
+
+    <p></p>
+
+    <p id="text"></p>
+
+    <p id="h1" >hello</p>
+
+    <button id="btn1">click</button>
+
+    <button ondblclick="clickal()">double click</button>
+
+    <input type="text" onchange="chage()">
+    <input type="text" onkeydown="chage()">
+    <input type="text" onkeyup="chage()">
+    <input type="text" onkeypress="chage()">
+
+    <p onmouseenter="chage()">mouse</p>
+    <p onmouseleave="chage()">mouse</p>
+
+    <p id= "w1" >text origin</p>
+    <button onclick="text()">cj</button>
+</body>
+<script>
+
+    let chage = () =>{
+        alert("changed")
+    }
+
+    let text =()=>{
+        document.getElementById("w1").innerHTML = "changed"
+    }
+
+    document.getElementById("p1").innerHTML = "<h1>element by id</h1>"
+    document.getElementsByClassName("c1")[0].innerHTML = "class element"
+
+   // for(let i = 0 ; i < 3 ; i++){
+     //   document.getElementsByClassName("c1")[i].innerHTML = "class element"
+    // }
+    
+    document.getElementsByTagName("p")[3].innerHTML = "tag name"
+
+    document.getElementById("text").innerText = "<h1>element by id</h1>"
+
+
+    document.querySelector("#p1").innerHTML = "query"
+
+    document.getElementById("h1").style.color = "blue"
+    
+
+    document.getElementById("h1").classList.add("st1")
+
+    document.getElementById("btn1").addEventListener("click",()=>{
+        alert("you are click button")
+    })
+
+    let clickal = ()=> {
+        alert("clicked")
+    }
+
+   console.log( localStorage.getItem("user") )
+
+</script>
+</html>
+
+

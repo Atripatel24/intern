@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function name(){
+        // work code 
+    }
+
+    // arrow function 
+
+    let arrow = () =>{
+        console.log("arrow function");
+        
+    }
+
+    arrow()
+    arrow()
+
+    // map , foreach , filter , sort , reduce
+
+    let arr = [1,2,3,4,5]
+
+    arr.forEach( (i)=>
+        console.log(i+1)
+     )
+
+    console.log("-------------------------------------");
+
+
+    arr.map((index)=> console.log(index +1))
+
+    console.log("-------------------------------------");
+
+    let arr1 = [ 11 ,4 ,56 ,39]
+
+    arr1.sort((a,b)=> a-b )
+
+    console.log(arr1);
+
+    let alpha  = ["a" , "z" ,"l" ,"d"]
+
+    alpha.sort()
+    console.log(alpha);
+
+    console.log("-------------------------------------");
+
+    let filterarr = arr1.filter((a)=> a > 35 )
+    console.log(filterarr);
+
+    console.log("-----------------------------------");
+
+    console.log(arr1); 
+
+    // define array = [11, 4 ,56,39]
+
+    let arr3 = [ 11, 4, 56 ,39]
+    // array = [4,11,39,56]
+
+    let reducearr = arr3.sort((a,b)=>a-b).reduce((preValue , currentValue) => preValue - currentValue)
+    
+    console.log(reducearr);
+
+    //  11 = 11   
+    // 11 ,4
+    // 15 , 56 = 71
+    // 71 , 39 = 110
+    // 110 , 
+
+    // -7  , -46 , -102
+// -11
+
+</script>
+</html>

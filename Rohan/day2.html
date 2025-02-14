@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String method</h1>
+</body>
+<script>
+
+    let x = "hello world"
+    let y = "HYY"
+    let z = "     white"
+
+    console.log(x.length);
+    
+    console.log(x.toUpperCase());
+    console.log(y.toLowerCase());
+
+    console.log(z);
+    console.log(z.trim());
+
+    console.log(x.slice(2,5));
+    console.log(x.slice(7,9));
+
+    console.log(x.concat(y));
+
+    console.log(x.replace("h","z"));
+    console.log(x.replaceAll("l","q"))
+
+    console.log(x.charAt(2));
+    console.log(x[2]);
+
+    let p = "23"
+    console.log(typeof p);
+
+    let q = parseInt(p)
+    console.log("q value :",typeof q,);
+
+
+    let w = "*"
+    console.log(w.repeat(5));
+
+
+    for(let i = 1 ; i <=5 ; i++){
+        console.log(w.repeat(i));
+    }
+
+</script>
+</html>

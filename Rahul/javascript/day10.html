@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promises</h1>
+</body>
+<script>
+
+    let data = new Promise((resolve,reject)=>{
+
+        let x = 5
+        if(x == 5 ){
+            resolve("pass")
+        }else{
+            reject("fail")
+        }
+    })
+
+    data.then((message)=>{
+        console.log(message);
+    }).catch((err)=>{
+        console.log(err);
+    })
+
+    console.log(data);
+
+    let time = () =>{
+        setTimeout(()=>{
+            console.log("time function");
+        },5000)
+    }
+
+    // time()
+
+
+    let a1 = new Promise((resolve,reject)=>{
+
+        setTimeout(()=>{
+           // reject("fail")
+        },5000)
+      
+    })
+
+
+    let promisefun = async() =>{
+        console.log("object");
+        await data
+        console.log("after");
+        await a1
+    }
+    
+    // promisefun()
+
+
+    localStorage.setItem("user",12)
+    localStorage.removeItem("user")
+
+
+    // object
+
+    let obj = { name:"rahul" , id:1 }
+
+    console.log(obj.name);
+
+// Constructors of Object
+    function obje (a,b){
+        this.name = a,
+        this.id = b
+    }
+
+    let person = new obje("atri",2)
+    let person1 = new obje("name1",3)
+
+    console.log(person);
+    console.log(person1.name);
+
+
+
+
+
+</script>
+</html>

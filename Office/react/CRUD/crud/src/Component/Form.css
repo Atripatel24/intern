@@ -1,0 +1,38 @@
+form{
+    border: 2px solid;
+    width: 20%;
+    padding: 2% 2%;
+    margin: 3% 40%;
+    border-radius: 3%;
+}
+
+h1{
+    text-align: center;
+}
+
+label{
+    font-style: italic;
+    font-size: large;
+    margin-top: 80px;
+}
+
+input{
+    outline: 0;
+    padding: 5px 10px;
+    font-size: medium;
+    width: 90%; 
+}
+
+
+.button{
+    background-color: red;
+    padding: 8px 14px ;
+    color: white;
+    font-size: medium;
+    border-radius: 8px;
+    border: none;
+}
+
+.error{
+    color: red;
+}

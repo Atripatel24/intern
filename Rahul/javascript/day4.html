@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="q1"></p>
+    <p class="c1"></p>
+    <p class="c1"></p>
+</body>
+<script>
+
+    // for , while , do while
+
+    //for(let x = 1 ; x <= 10 ; x++ ){
+      //  if(x - 2 >= 4){
+        //    console.log(x);
+    //    }
+        
+    // }
+   
+    
+    // let i = 1 ;
+
+    // while(i<=100){
+
+       // if(i % 5 !== 0){
+        //console.log(i);
+       // }
+       // i++;
+    // }
+
+//  Do while
+
+let i = 10;
+
+do{
+    console.log(i);
+    i-=2;
+}while(i >= 1)
+
+
+// dom = document object model
+
+document.getElementById("q1").innerHTML = "<h1>header</h1>"
+document.getElementsByClassName("c1")[1].innerHTML = "class element"
+
+
+for(let i = 1 ; i < 10 ; i++){
+    console.log(`5*${i}`,i*5);
+}
+
+
+for(let i = 1 ; i <= 100 ; i++){
+    if(i % 2 !== 0){
+        console.log(i);
+    }
+}
+
+</script>
+</html>

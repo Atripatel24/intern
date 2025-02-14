@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array method</h1>
+</body>
+<script>
+
+    let arr = ["h","e","l","l","o"]
+    console.log(arr);
+
+    console.log("length",arr.length);
+
+    console.log(arr.indexOf("h")); // return index number
+    console.log(arr[1]); // return index value
+
+    // add item in last 
+    arr.push(44)
+    console.log(arr);
+
+    // remove item in last
+    arr.pop()
+    arr.pop()
+    console.log(arr);
+
+    // add item in first 
+    arr.unshift("22")
+    console.log(arr);
+
+    // remove item in first
+    arr.shift()
+    console.log(arr);
+
+    console.log("array", arr);
+
+    console.log(arr.slice(2,4));
+
+    let splicearr = arr.splice(1,0,33)
+    console.log("splice",splicearr);
+    console.log(arr);
+
+    console.log(arr.reverse());
+
+    console.log(arr.includes(22));
+
+    // add 2 array
+    let arr1 = [1,2]
+    console.log(arr.concat(arr1));
+
+    // convert string
+    let str = arr.join(",")
+    console.log(arr.join(","));
+    console.log(typeof arr.join(","));
+
+    // string to array
+
+    console.log(str.split(","))
+
+    let str1 = "1/12/123"
+    console.log(str1.split("/"));
+
+
+    // functions
+
+
+    function cal(a,b){
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log("----------")
+    }
+
+ //  console.log(1+2);
+ //  console.log(1-2);
+ //  console.log(1*2);
+
+  // console.log(20+2);
+  // console.log(20-2);
+  // console.log(20*2);
+
+  cal(1,2)
+  cal(20,2)
+  cal(40,2)
+  cal(50,2)
+  cal(60,2)
+  cal(70,2)
+  cal(80,2)
+  cal(90,2)
+
+</script>
+
+</html>

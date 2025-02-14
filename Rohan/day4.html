@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array methods</h1>
+</body>
+<script>
+    let arr = [1,2,3,4,5]
+
+    // map 
+    arr.map( (i)=>{
+        console.log(i);
+    } )
+
+    // filter 
+
+   let filterarr = arr.filter((i)=> i%2 !==0 )
+   console.log(filterarr);
+
+   // sort 
+    
+   let arr1 = [11, 4, 65, 82, 38]
+  let sortarr = arr1.sort((a,b)=> a-b)
+    console.log(sortarr);
+    console.log(sortarr.reverse());
+
+    let alpha = ["d","z","a","i","h"]
+    console.log(alpha.sort());
+
+    // reduce
+console.log(arr);
+    let reducearr = arr.reduce((preval,currentval)=> preval + currentval)
+    console.log(reducearr);
+
+    // preval currentval
+    //          1
+    //  1       2
+    //  3       3
+    //  6       4
+    //  10      5
+    //  15 
+
+console.log(arr);
+    console.log( arr.includes(5) ); // return true & false
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #i1{
+            background-color: darkolivegreen;
+        }
+
+        .c1{
+            color: white;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 onmouseenter="enter()">Javascript </h1>
+
+    <p id="i1" onclick="change()">dom example</p>
+
+    <button ondblclick = "clickevent()" >click</button>
+    
+    <button onclick = "submit()" id="b1">submit</button>
+
+    <input type="text" onchange="change()">
+
+    <input type="text" onclick="change()" >
+
+</body>
+<!-- <script src="./script.js"> -->
+
+    <script>
+
+        // events
+
+        function clickevent (){
+            alert("event work")
+        }
+
+        let change = () =>{
+            console.log();
+            alert("change")
+        }
+
+        // click , mouse , change
+
+        let submit = () =>{
+            alert("form submited ! ")
+        }
+
+        let enter = () => {
+            alert("you are in heading tag")
+        }
+
+        // css 
+
+        document.querySelector("#i1").classList.add("c1")
+
+      //  document.getElementById("b1").addEventListener("click",clickevent)
+
+    </script>
+
+</html>

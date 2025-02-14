@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    let arr = [1,2,3,4,5,90]
+
+    arr.forEach((i)=>
+        console.log(i*i)
+    )
+    console.log("---------------");
+    arr.map((i)=>
+        console.log(i)
+    )
+
+    console.log("---------------");
+
+    let arr1 = [1,22,3,42,5,90]
+
+
+    arr1.sort((num1,num2) =>
+     num1 - num2
+     )
+
+    console.log("object",arr1);
+
+let alpha = [ "a" , "z" ,"w" ,"d"]
+
+   console.log( alpha.sort());
+
+
+   console.log("-----------------------------------");
+
+   let a1 = [121 , 2, 56 ,34, 70,40,2646]
+
+ let filterarr = a1.filter((a)=> a > 50)
+
+ console.log(filterarr);
+
+ console.log("-----------------------------------");
+
+ let reducearr = a1.reduce((preval , currentval)=> preval + currentval)
+ console.log(reducearr);
+
+
+ console.log("------------------------------------");
+
+ let persons = [
+    { name:"john" , id:1 },
+    { name:"peter" , id:2 },
+    { name:"sam" , id:3 },
+    { name:"krish" , id:4 },
+ ]
+
+    persons.map((user)=> {
+        console.log(user.id);
+        console.log(user.name);
+    }
+    )
+
+
+</script>
+</html>

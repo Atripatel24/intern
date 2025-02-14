@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        ul{
+            list-style: none;
+            background-color: burlywood;
+            font-size: 70px;
+        }
+        li{
+            display: inline;
+            padding: 10px;
+        }
+
+        @media screen and (max-width:768px){
+            ul{
+                background-color: silver;
+                font-size: xx-large;
+            }
+
+            li{
+                display: block;
+            }
+        }
+
+        @media screen and (min-width:768px ) and (max-width:1440px) {
+            ul{
+                background-color: yellowgreen;
+
+            }
+        }
+
+        .main{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .subdiv{
+            background-color: lightcoral;
+            text-align: center;
+            width: 300px;
+        }
+
+        @media screen and (max-width:1440px) and (min-width:500px){
+            .main{
+                flex-direction: column;
+            }
+
+        }
+
+        .icon{
+            color: white;
+            display: none;
+        }
+
+        .img:hover .icon{
+            display: block;
+        }
+
+        .img:hover .icon:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>link</li>
+        <li>Blogs</li>
+    </ul>
+
+    <div class="main">
+        <div class="subdiv">1</div>
+        <div class="subdiv">2</div>
+        <div class="subdiv">3</div>
+    </div>
+<br><br>
+
+    <div style="position: relative;" class="img">
+        <img src="./uwp3574478.png" alt="" style="width: 100px;z-index: -1;position: absolute;">
+        <i class="fa-solid fa-search icon"></i>
+    </div>
+
+</body>
+</html>

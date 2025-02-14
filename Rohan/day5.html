@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1{
+            color: red;
+        }
+        .a2{
+            background-color: blanchedalmond;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="p1"></p>
+    <p class="c1"></p>
+    <p class="c1"></p>
+    <p></p>
+
+    <p id="q1"></p>
+
+    <p class="a1"> style class</p>
+
+    <button id="btn">click</button>
+
+    <button onclick="clicked()"> submit</button>
+    <button ondblclick="clicked()">double</button>
+
+    <p id="text1" onclick="text()">before</p>
+
+</body>
+<script>
+    // DOM (document object model)
+
+    document.getElementById("p1").innerHTML = "<h1>html change</h1>"
+    document.getElementsByClassName("c1")[0].innerHTML = "class element"
+    document.getElementsByTagName("p")[3].innerHTML = "tag name"
+
+    document.getElementById("q1").innerText = "<h1>text change</h1>"
+
+    // document.getElementById("p1").style.color = "green"
+
+    document.getElementsByClassName("a1")[0].classList.add("a2")
+
+
+    document.getElementById("btn").addEventListener("click",()=>{
+        document.getElementById("p1").style.color = "green"
+    })
+
+    let clicked = () =>{
+        alert("alert message")
+    }
+
+    let text = () => {
+        document.getElementById("text1").innerHTML = "after"
+    }
+
+
+</script>
+</html>

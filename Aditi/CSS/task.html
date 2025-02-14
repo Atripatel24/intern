@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hoverdiv{
+            display: none;
+        }
+
+        .productdiv{
+            position: relative;
+        }
+
+        .productdiv:hover .hoverdiv {
+            display: block; 
+            position: absolute;
+            bottom: 40px;
+        }
+
+        .productdiv:hover .maindiv{
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div style="display: flex;justify-content: space-around;">
+        <div class="productdiv" style="margin: 40px;border:1px solid black;border-radius:10px;padding:10px; ">
+            <div class="maindiv">
+                <div style="text-align:center;position:relative">
+                    <img src="./product-item1.png" alt="" style="width: 150px;z-index:-1">
+                    <button
+                        style="position: absolute;left:0;font-size:large;background-color:indianred;border:none;border-radius:10px;color:white">10%
+                        off</button>
+                </div>
+                <div>
+                    <p style="font-size: large;"><b>House Of Sky Breath</b>
+                        <br>
+                        Lauren Asher icon icon icon
+                        <br>
+                        <span style="color:indianred">$870</span>
+                    </p>
+                </div>
+            </div>
+            <div class="hoverdiv">
+                <button>search</button>
+            </div>
+
+        </div>
+
+        <div class="productdiv" style="margin: 40px;border:1px solid black;border-radius:10px;padding:10px; ">
+            <div class="maindiv">
+                <div style="text-align:center;">
+                    <img src="./product-item1.png" alt="" style="width: 150px;">
+                    <button
+                        style="position: absolute;left:0;font-size:large;background-color:indianred;border:none;border-radius:10px;color:white">10%
+                        off</button>
+                </div>
+                <div>
+                    <p style="font-size: large;"><b>House Of Sky Breath</b>
+                        <br>
+                        Lauren Asher icon icon icon
+                        <br>
+                        <span style="color:indianred">$870</span>
+                    </p>
+                </div>
+            </div>
+            <div class="hoverdiv">
+                <button>search</button>
+            </div>
+
+        </div>
+
+        <div class="productdiv" style="margin: 40px;border:1px solid black;border-radius:10px;padding:10px; ">
+            <div class="maindiv">
+                <div style="text-align:center;">
+                    <img src="./product-item1.png" alt="" style="width: 150px;">
+                </div>
+                <div>
+                    <p style="font-size: large;"><b>House Of Sky Breath</b>
+                        <br>
+                        Lauren Asher icon icon icon
+                        <br>
+                        <span style="color:indianred">$870</span>
+                    </p>
+                </div>
+            </div>
+            <div class="hoverdiv">
+                <button>search</button>
+            </div>
+
+        </div>
+
+        <div class="productdiv" style="margin: 40px;border:1px solid black;border-radius:10px;padding:10px; ">
+            <div class="maindiv">
+                <div style="text-align:center;position:relative">
+                    <img src="./product-item1.png" alt="" style="width: 150px;z-index:-1">
+                    <button
+                        style="position: absolute;left:0;font-size:large;background-color:indianred;border:none;border-radius:10px;color:white">10%
+                        off</button>
+                </div>
+                <div>
+                    <p style="font-size: large;"><b>House Of Sky Breath</b>
+                        <br>
+                        Lauren Asher icon icon icon
+                        <br>
+                        <span style="color:indianred">$870</span>
+                    </p>
+                </div>
+            </div>
+            <div class="hoverdiv">
+                <button>search</button>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+
+</html>

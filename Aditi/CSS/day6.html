@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <style>
+
+        .div{
+            width: 400px;
+            border: 1px solid red;
+        }
+
+        .max{
+            /*
+            max-width: 400px;
+            */
+            min-width: 400px;
+            border: 1px solid red;
+        }
+
+        .icon:hover{
+            font-size: xx-large;
+            color: brown;
+        }
+
+        button:hover{
+            background-color: brown;
+            color: white;
+        }
+
+        a:active{
+            color: green;
+        }
+
+        .fc c:first-child {
+            color: blue;
+        }
+
+        /*
+        p f:first-child{
+            color:blue
+        }
+        */
+
+      
+        p::selection{
+            color: red;
+            background-color: bisque;
+        }
+
+        /*
+        p::first-letter{
+            font-size: xx-large;
+            color: red;
+        }
+
+        p::first-line{
+            color: blue;
+        }
+        */
+
+        table{
+            border: 1px solid ;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid;
+        }
+
+        tr:nth-child(odd){
+            background-color: cadetblue;
+            color: white;
+        }
+
+        .p1::after{
+            content: "----";
+        }
+
+        .p2::before{
+            content: "-------";
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+    
+    <p class="div">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <p class="max">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <i class="fa-solid fa-house icon"></i>
+
+    <i class="fa-regular fa-user"></i>
+
+    <i class="fa-solid fa-image"></i>
+
+    <i class="fa-solid fa-magnifying-glass"></i> <br> <br>
+
+    <button>click</button>
+
+    <a href="">home</a>
+
+    <!-- <p class="fc">Lorem ipsum dolor sit some amet consectetur adipisicing elit. Voluptate accusamus odio nesciunt nihil autem <c>impedit</c> impedit in <i>modi</i> adipisci dolore! Rem, incidunt quae! Eos, fugiat et cumque ut quia laborum.</p> -->
+
+    <p>Lorem ipsum dolor sit amet  consectetur adipisicing elit. Dolorem sed eaque labore? Harum, necessitatibus. Mollitia, non quia. Placeat mollitia <f>dolore</f> eaque architecto, maiores modi incidunt eligendi, cumque, ratione qui facilis.</p>
+
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi earum laboriosam atque mollitia ut vero itaque, harum illo nobis sit placeat voluptatem voluptates sequi explicabo, fugit et, inventore esse sint!</p>
+
+    <p>new line</p>     
+
+    <table>
+        <tr>
+            <td>name</td>
+            <td>email</td>
+        </tr>
+        <tr>
+            <td>name1</td>
+            <td>email1</td>
+        </tr>
+        <tr>
+            <td>name1</td>
+            <td>email1</td>
+        </tr> <tr>
+            <td>name1</td>
+            <td>email1</td>
+        </tr>
+        
+        <tr>
+            <td>name1</td>
+            <td>email1</td>
+        </tr>
+    
+    </table>
+
+    <p class="p1">after effect</p>
+    <p class="p2">before effect</p>
+
+</body>
+</html>

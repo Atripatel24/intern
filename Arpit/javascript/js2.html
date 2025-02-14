@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>hello</p>
+
+    <p id="q1"></p>
+
+    <script>
+
+        let x = 7  ;
+        let y = 6
+
+        if( x >= 5 && y > 9 ){ 
+            console.log("x is greater than 5");
+        }
+        else if(x < 5){
+            console.log('x is less than 5')
+        }
+        else{
+            console.log("not defined");
+        }
+
+
+       /* 
+       if {
+            true
+        }
+        else{
+            if{
+            true
+            }
+            else{
+            }
+        } 
+            */ 
+        let a = 16
+        let b = 3
+
+        switch (a) {
+
+            case a = 2 : 
+            console.log(" a is 2");
+            break ;
+
+            case a = 5 :
+            console.log("a is 5");
+            break;
+
+            case a = 10 :
+            console.log("a is value 10");
+            break;
+
+            default :
+            console.log("not declare");
+        }
+
+// tornary operator
+
+//( condition) ? true output : false output
+
+let z = 10 ;
+
+(z = 10) ? document.getElementById('q1').innerHTML = " z is 10 " : document.getElementById('q1').innerHTML = " not 10"
+
+
+       /* let s = parseInt(prompt("enput number"))
+        console.log("s is" , s);
+        let d = parseInt(prompt("enput number"))
+
+       console.log("d is" , d);
+
+       let q = parseInt(prompt("enput number"))
+
+       console.log("d is" , q);
+
+       */
+
+       let p = parseInt(prompt("some"))
+       let c = parseInt(prompt("some"))
+       let v = prompt("some")
+
+       if ( v = "+"){
+           console.log("p + c :" , p+c);
+       }else{
+        console.log("object");
+       }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .div{
+            display: flex;
+            background-color: cadetblue;
+            justify-content:space-evenly;
+            /* 
+            justify-content: space-around;
+            justify-content: space-between;
+            */
+            flex-direction: row-reverse;
+            
+
+        }
+
+        .content{
+            background-color: cornsilk;
+            width: 20px;
+
+        }
+       
+        .p{
+            text-shadow: -2px 1px  red;
+        }
+
+        .shadow{
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            margin-left: 100px;
+
+            box-shadow: 5px 5px 5px 10px darkslateblue;
+        }
+
+        .img{
+            background-image: url(../naruto_wallpaper.jpg);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="div">
+
+       <div class="content">1</div>
+       <div class="content">2</div>
+       <div class="content">3</div>
+       <div class="content">4</div>
+       <div class="content">5</div>
+       <div class="content">6</div>
+
+    </div>
+
+    <div style="display: flex;justify-content:space-between">
+        <div style="width: 60%;">Navbar</div>
+        <div style="display: flex; flex-direction:row ; width:40% ; justify-content:space-around">
+            <div>home</div>
+            <div>contact</div>
+            <div>about</div>
+        </div>
+    </div>
+
+    <p class="p">hello</p>
+
+    <br><br><br>
+
+    <div class="shadow">
+
+    </div>
+
+    <div class="img">
+        <h2>image</h2>
+        
+    </div>
+
+
+
+</body>
+</html>

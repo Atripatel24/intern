@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String method</h1>
+</body>
+<script>
+
+    let a1 = "string qwreqtq"
+    let q1 = `add ${a1}`
+
+    console.log(q1);
+
+    let newline = "hello \n world"
+    console.log(newline);
+
+    
+    let space = "hello \t world"
+    console.log(space);
+
+
+    let str = "hello"
+    console.log(str.length);
+    console.log(str.toUpperCase());
+    let lower = "JAVASCRPIT"
+    console.log(lower.toLowerCase());
+
+    let white = "     space"
+    console.log(white);
+    console.log(white.trim());
+
+
+
+    let str1 = "hello";
+    console.log(str1.replace("l","9"));
+    console.log(str1.replaceAll("l","9"));
+    
+    // index value start with 0
+
+    console.log(str1[0]);
+    console.log(str1.charAt(4));
+    console.log(str1.indexOf("o"));
+
+    console.log(str1.includes("e")); // return true / false
+
+    let data = "javascript"
+
+    console.log(data.repeat(2));
+
+    console.log(data.endsWith("pt")); // return true / false
+    console.log(data.startsWith("java")); // return true / false
+
+    console.log(data.substring(0,4));
+    console.log(data.slice(0,4));
+
+
+</script>
+</html>

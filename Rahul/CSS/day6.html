@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 500px;
+            height: 200px;
+            z-index: -1;
+            position: absolute;
+        }
+
+        .p {
+            color: blueviolet;
+            font-size: xx-large;
+        }
+
+        /*
+        
+        child : >
+        div after : +
+        div sivay badha : ~
+
+        */
+
+        .cloud+p {
+            color: red;
+        }
+
+        .hoverbtn {
+            color: brown;
+            background-color: beige;
+        }
+
+        .hoverbtn:hover {
+            color: blue;
+            background-color: aqua;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+
+        /*
+        p{
+            color: red;
+        }
+
+        p:hover{
+            color: aqua;
+            margin-left: 50px;
+            font-size: larger;
+        } */
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        .para :first-child {
+            color: blue;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div>
+        <img src="../naruto_wallpaper.jpg" alt="">
+        <p class="p">back</p>
+    </div> -->
+
+    <div class="cloud">
+        <p> paragraph 1</p>
+    </div>
+
+    <p>paragraph 2</p>
+
+    <div class="cloud">
+        <p> paragraph 3</p>
+    </div>
+
+    <p>paragraph 4</p>
+    <p>paragraph 5</p>
+
+
+    <button class="hoverbtn">click</button>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <a href="#">go to page</a>
+
+    <p class="para">
+        Lorem ipsum losdolor some sit amet consectetu<b>r</b>.
+    </p>
+
+    <div>
+        <div>hello</div>
+    </div>
+
+    <button style="font-style:italic; background-color:whitesmoke ; border: none">add to cart</button>
+
+    <button>@</button>
+
+
+
+</body>
+
+</html>

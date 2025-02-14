@@ -1,0 +1,64 @@
+/* navbar css */
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    /* margin-bottom: 20px; */
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 70px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: white;
+    color: #333;
+  }
+
+
+
+  /* Dynamic route page */
+
+ tr,td,th,table {
+  border: 1px solid;
+  border-collapse: collapse;
+  margin: auto;
+  padding: 10px;
+  font-size: larger;
+ }
+
+ .dy-btn{
+  margin: 2% 40% ;
+  font-size: large;
+  color: white;
+  background-color: red;
+  padding: 5px 9px;
+  border: none;
+ }
+
+ /* hooks page */
+
+ .Link{
+  text-decoration: none;
+ }
+
+ /* api page */
+
+ .link{
+    padding: 14px 100px ;
+ }
+
+ .div{
+  text-align: center;
+ }

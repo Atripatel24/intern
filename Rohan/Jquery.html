@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ex.</p>
+    <button id="btn">hide</button>
+    <button id="show">show</button>
+    <button id="toggle">toggle</button>
+    <button id="fade">fade</button>
+    <button id="side">side</button>
+    
+    <br><br>
+    <button id="btndiv">animate</button>
+    <br><br>
+
+    <div id="div" style="background-color: brown;width: 100px;height:100px;position:absolute"></div>
+
+
+</body>
+<script>
+
+    $(document).ready(function(){
+        $('#btn').click(function (){
+            // $('.p1').hide()
+            // $('.p1').hide("slow")
+            $('.p1').hide()
+        })
+    })
+
+    $(document).ready(function(){
+        $('#show').click(function (){
+            $('.p1').show()
+        })
+    })
+
+    $(document).ready(function(){
+        $('#toggle').click(function (){
+            $('.p1').toggle()
+        })
+    })
+
+    $(document).ready(function(){
+        $('#fade').click(function (){
+            $('.p1').fadeToggle()
+            //$('.p1').fadeOut()
+            //$('.p1').fadeIn()
+        })
+    })
+
+    $(document).ready(function(){
+        $('#side').click(function (){
+            $('.p1').slideToggle()
+        })
+    })
+
+    $(document).ready(function(){
+        $('#btndiv').click(function (){
+            $('#div').animate({
+                left:"100px",
+                opacity:'0.3',
+                
+            }).css({
+                'background-color' : "blue"
+            })
+        })
+    })
+
+</script>
+</html>

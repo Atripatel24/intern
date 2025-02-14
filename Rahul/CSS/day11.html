@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .gred {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to right bottom, red 20%, yellow 40%, green);
+        }
+
+        .redial {
+            width: 100px;
+            height: 100px;
+            background-image: radial-gradient(red, yellow, blue);
+        }
+
+        .conical {
+            width: 100px;
+            height: 100px;
+            background-image: conic-gradient(orange, blue, yellow, purple, grey);
+            border-radius: 50%;
+        }
+
+
+        .nav {
+            background-color: red;
+            font-size: larger;
+        }
+
+        li{
+            display: inline;
+        }
+
+        @media screen and (max-width:375px)  {
+            .nav {
+                background-color: green;
+                height: 100px;
+                color: yellow;
+                font-size: xx-large;
+            }
+            li {
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div class="gred">
+        <p style="padding: 30%;">linear</p>
+    </div>
+
+    <div class="redial"></div>
+
+    <div class="conical"></div> -->
+
+    <div class="nav">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+
+</body>
+
+</html>

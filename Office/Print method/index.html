@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Multi-Page PDF</title>
+  <style>
+   
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .print-container {
+        width: 100%;
+      }
+
+     
+      .page-break {
+        page-break-before: always;
+        page-break-inside: avoid;
+      }
+    }
+
+   
+    .content {
+      width: 90%;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="print-container">
+    <div class="content">
+      <h1>Page 1</h1>
+      <p>This is the first page content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="content page-break">
+      <h1>Page 2</h1>
+      <p>This is the second page content. Nulla consequat massa quis enim.</p>
+    </div>
+    <div class="content page-break">
+      <h1>Page 3</h1>
+      <p>This is the third page content. Donec quam felis, ultricies nec, pellentesque eu.</p>
+    </div>
+  </div>
+
+  <script>
+    // Trigger the print dialog
+    window.print();
+  </script>
+</body>
+</html>

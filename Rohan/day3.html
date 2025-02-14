@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array method</h1>
+</body>
+<script>
+
+    let arr = [1, 2, 3, 4, 5]
+
+    console.log(arr);
+
+    // index to value
+    console.log("index value", arr[2])
+    // return index 
+    console.log("index number", arr.indexOf(2));
+
+    // add value in last
+    arr.push(66)
+    console.log("push", arr);
+
+    // remove last 
+    arr.pop()
+    console.log("pop", arr);
+
+    // add first
+    arr.unshift("hello")
+    console.log("unshift", arr);
+
+    // remove first
+    arr.shift()
+    // arr.shift()
+    console.log("shift", arr);
+
+    // take part for array
+    console.log("slice", arr.slice(2, 4));
+
+    // add & remove form between
+    console.log("splice", arr.splice(2, 0, "add"));
+    console.log(arr);
+
+    // map , sort , reduce , filter , foreach = function call
+
+
+    function sum(a, b) {
+        console.log("function call");
+        console.log("a", a);
+        console.log("b", b);
+        console.log(a + b);
+    }
+
+    sum(6, 2)
+    sum(33, 21)
+    sum(66, 65)
+
+    // arrow function 
+
+    let cal = (x, y) => {
+        console.log("arrow function");
+        console.log(x * y);
+    }
+
+    cal(34, 21)
+
+
+    let arr1 = [1, 2, 3]
+    let arr2 = ["hello", "world"]
+
+    console.log(arr1.concat(arr2));
+
+    console.log(arr1.toString());
+
+    console.log(arr1.join(","));
+    console.log(typeof arr1.join(","));
+
+    let str = "h/e/l/l,o"
+    console.log(str.split("/"));
+
+    let arr5 = [11, 22, 33, 44]
+
+    arr5.forEach((i) => {
+        console.log(i+2);
+    })
+
+    console.log( arr5.reverse() )
+
+
+    let calculate = (a,b) =>{
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+    }
+
+    calculate(45,4)
+   calculate(200,18)
+
+   
+
+</script>
+
+</html>

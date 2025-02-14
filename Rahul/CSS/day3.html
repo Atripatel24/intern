@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+
+    <!-- for icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+
+
+
+    <style>
+        .out {
+            border: 1px dashed red;
+            width: max-content;
+            margin: 20px 10px;
+
+            outline-style: dashed;
+            outline-color: blue;
+            outline-width: 5px;
+            outline-offset: 10px;
+        }
+
+        .icon {
+            font-size: xx-large;
+            color: brown;
+        }
+
+        .table,
+        th,
+        td {
+            border-bottom: 1px solid;
+            border-collapse: collapse;
+            width: 200px;
+            margin-left: 200px;
+        }
+
+        td {
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        th {
+            background-color: cadetblue;
+            color: black;
+        }
+        /* odd = 1, 3, 5, 7 eki   
+           even = 2,4 ,6 ,8 beki
+        */
+        tr:nth-child(odd) {
+            background-color: black;
+            color: white;
+        }
+
+        .arrow {
+            transform: rotate(-30deg);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div >
+
+        <div style="width: 30%;float:right ; margin-right:40%">
+            <p class="out">Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div style="width: 30%;float:left">
+            <i class="fa-brands fa-twitter icon "></i>
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <i class="fa-solid fa-house"></i>
+
+            <i class="fa-solid fa-download icon"></i>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <table class="table">
+        <tr>
+            <th>head 1</th>
+            <th>head 2</th>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+    </table>
+
+
+
+    <div style=" margin-left:50px">
+        <p>para 1</p>
+        <p>para 2</p>
+    </div>
+
+
+
+
+</body>
+
+</html>

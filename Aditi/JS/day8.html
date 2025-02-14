@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise </h1>
+</body>
+<script>
+
+    let data = new Promise((resolve,reject)=>{
+
+        let x = 10;
+
+        setTimeout(()=>{
+            
+        if(x !== 10){
+            resolve("promise true")
+        }
+        else{
+            reject("false")
+        }
+        },3000)
+
+    })
+
+    let a1 = new Promise((resolve,reject)=>{
+
+        let x = 10;
+
+        if(x == 10){
+            console.log("object");
+            resolve("promise true")
+        }
+        else{
+            reject("false")
+        }
+
+    })
+
+
+    let obj = { name :"name1" ,id:"1"}
+
+    console.log(obj.id);
+
+    let fun1 = async() =>{
+       
+        await data
+
+        await a1
+        
+    }
+
+
+    localStorage.setItem("jsid",1234)
+    localStorage.removeItem("jsid")
+
+
+    
+
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .radiant{
+            width: 100px;
+            height: 100px;
+            background-image: radial-gradient(circle  ,red 50%,green,blue);      
+        }
+
+        .conic{
+            width: 100px;
+            height: 100px;
+            background-image: conic-gradient(at 50% 50%,red 90deg,green ,blue);
+            border-radius: 50px;
+
+        }
+
+        .box{
+            width:100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            box-shadow: 5px 10px 10px 10px red;
+        }
+
+        .main{
+            text-align: center;
+            display: flex;
+            /*
+            justify-content: space-around; 
+            jusify-content: space-evenly; 
+            */
+            justify-content: space-between;
+            /* flex-wrap: wrap;  automaic set */
+            /* flex-wrap: nowrap; not automaic set */
+
+            /* flex-direction: row; */
+
+            /* flex-direction: row-reverse; column; column-reverse */
+            
+        }
+
+        .inside{
+            width: 100px;
+            height: 100%;
+            background-color: rosybrown;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--     
+    <div class="radiant"></div>
+
+    <br><br>
+
+    <div class="conic"></div> -->
+
+    <!-- <div class="box"></div> -->
+
+    <div class="main">
+        <div class="inside">1</div>
+        <div class="inside">2</div>
+        <div class="inside">3</div>
+        <div class="inside">4</div>
+        <div class="inside">5</div>
+        <!-- <div class="inside">6</div>
+        <div class="inside">7</div>
+        <div class="inside">8</div>
+        <div class="inside">9</div>
+        <div class="inside">10</div> -->
+    </div>
+<!-- 
+    <div style="margin-top: 100px;">
+        <button style="margin-right: 900px;"> hello </button>
+        <button> world </button>
+    </div>
+
+    <div style="display: flex;justify-content: space-between;">
+        <button> flex </button>
+        <button> flex 2</button>
+    </div> -->
+</body>
+</html>

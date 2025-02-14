@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" onchange="change()" placeholder="change">
+
+    <input type="text" placeholder="keydown" onkeydown="key()">
+    <input type="text" placeholder="keyup" onkeyup="key()">
+
+    <button onmouseleave="change()">mouse</button>
+
+
+</body>
+    <script>
+        let change = () =>{
+            alert("change event work")
+        }
+        let key = () =>{
+            alert("key event")
+        }
+
+        // Object 
+
+        let obj = { name:"abc", number:123}
+
+        console.log(obj);
+        console.log(obj.name)
+
+        // constructor
+
+        function person (first,last){
+            this.firstname = first
+            this.lastname = last
+        }
+
+        let person1 = new person("peter","parker")
+        console.log(person1);
+
+        let person2 = new person("stark","tony")
+        console.log(person2);
+
+        // distructer 
+        let {firstname , lastname} = person2
+            console.log(lastname);
+
+        // spread(...)
+          let person3 = { ...person2 , age:32 ,firstname:"new"}  
+          // { firstname , lastname , age}
+          console.log(person3);
+
+          // ternory operater (html condition) use in framework
+          // { condition ? true output : false output}
+
+        // promises , async await , jquery 
+
+    </script>
+</html>
