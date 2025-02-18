@@ -1,6 +1,11 @@
 const express = require("express")
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
+
+app.use(express.json())
 
 //  post - frontend to backend    create 
 // get - backend to frontend      get
@@ -8,30 +13,72 @@ const app = express()
 // delete -                       delete
 
 
-app.get('/',(req,res)=>{
-    res.send(" get method")
-})
+// app.get('/',(req,res)=>{
+//     res.send(" get method")
+// })
 
-app.get("/home",(req,res)=>{
-    res.send("home page")
-})
+// app.get("/home",(req,res)=>{
+//     res.send("home page")
+// })
 
-app.post("/post",(req,res)=>{
+// app.post("/post",(req,res)=>{
 
-    let user = {name:"john" , id:1}
+//     let user = {name:"john" , id:1}
+
+//     res.send({
+//         message:" post ",
+//         data : user
+//     })
+// })
+
+// app.delete("/delete/:id",(req,res)=>{
+    
+//     let id = req.params.id
+
+//     res.send(`delete data : ${id}`)
+// })
+
+
+app.post('/create',(req,res)=>{
+
+        console.log(req.body)
 
     res.send({
-        message:" post ",
-        data : user
+        success:true,
+        message:"user create success !",
+        data: req.body
+    })
+
+})
+
+app.get('/getuser',(req,res)=>{
+
+    res.send({
+        message:" get user "
+    })
+
+})
+
+app.put('/updateuser/:id',(req,res)=>{
+    
+    console.log(req.body)
+
+    res.send({
+        message:`update user ${req.params.id}`,
+        data: req.body
+    })
+
+})
+
+
+app.delete('/deleteuser/:id',(req,res)=>{
+    res.send({
+        message:`delete user ${req.params.id}`
     })
 })
 
-app.delete("/delete/:id",(req,res)=>{
-    
-    let id = req.params.id
 
-    res.send(`delete data : ${id}`)
-})
+
 
 
 app.listen(4000,()=>{
