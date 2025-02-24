@@ -67,4 +67,44 @@ let getUserById = async(req,res)=>{
     }
 }
 
-module.exports = { createuser , getAllUser ,getUserById }
+let updateUser = async(req,res) =>{
+    try{
+        let id = req.params.id 
+
+        let { name , email , password} = req.body
+
+        let updatedata = await User.findByIdAndUpdate(id, {name , email, password})
+
+        res.send({
+            message:"update user ",
+            data : updatedata
+        })
+
+    }catch(err){
+        res.send({
+            message:"error on update user",
+            data : err
+        })
+    }
+}
+
+let deleteuser = async(req,res) =>{
+    try{
+
+        let id = req.params.id
+
+        let deletedata = await User.findByIdAndDelete(id)
+        
+        res.send({
+            message:` user delete ${id}`
+        })
+
+    }catch(err){
+        res.send({
+            message:"error on delete user",
+            data : err
+        })
+    }
+}
+
+module.exports = { createuser , getAllUser ,getUserById , updateUser , deleteuser}

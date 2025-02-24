@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Form = () => {
 
     const [user,setUser] = useState()
+    let navigate = useNavigate()
 
     let userHandler = (event) =>{
         setUser({...user,[event.target.name]:event.target.value})
     }
 
-    let submitHandler = (event) =>{
+    let submitHandler = async (event) =>{
         event.preventDefault()
         console.log(user)
 
@@ -19,6 +22,13 @@ const Form = () => {
         // delete - delete
 
         // install module axios
+
+        let res = await axios.post('https://67b473d5392f4aa94faae9e4.mockapi.io/users',user)
+
+        if(res){
+          navigate('/table')
+        }
+      
 
     }
 
@@ -35,6 +45,8 @@ const Form = () => {
 
         <label>password :</label>
         <input type="text" name='password' onChange={userHandler}/> <br /><br />
+
+        <input type="text" name='surname' onChange={userHandler} />
 
         <button>submit</button>
 
