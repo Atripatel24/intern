@@ -1,17 +1,27 @@
 import React, { useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Form = () => {
     
     const [user, setUser] = useState()
+    const navigate = useNavigate()
 
     const userHandler = (event) =>{
         setUser({ ...user , [event.target.name] : event.target.value})
         // console.log(user)
     }
 
-    const submitHandler = (event) =>{
+    const submitHandler = async (event) =>{
         event.preventDefault()
         console.log(user)
+
+        let res = await axios.post('https://67b473d5392f4aa94faae9e4.mockapi.io/users',user)
+
+        if(res){
+          navigate('/table')
+        }
+
     }
 
 
