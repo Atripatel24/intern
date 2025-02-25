@@ -107,4 +107,59 @@ let deleteuser = async(req,res) =>{
     }
 }
 
-module.exports = { createuser , getAllUser ,getUserById , updateUser , deleteuser}
+let register = async(req,res) =>{
+    try{
+
+        let { name , email , password } =  req.body
+
+        let exist = await User.findOne({email})
+        if (exist) throw "user already exist..!"
+
+        let newuser = new User({
+            name,
+            email,
+            password
+        })
+
+        await newuser.save()
+
+        res.send({
+            message:"user create success",
+            data: newuser
+        })
+
+
+    }catch(err){
+        res.send({
+            message : "error on registration ! ",
+            data: err
+        })
+    }
+}
+
+
+let login = async(req,res) => {
+    try{
+
+        let { email , password } = req.body
+
+        let loginemail = await User.findOne({email})
+        if(!loginemail) throw "Invalid email"
+
+        let loginpassword = await User.findOne({password})
+        if (!loginpassword) throw "Invalid password "
+
+        res.send({
+            message:"Login success",
+            data: email
+        })
+
+    }catch(err){
+        res.send({
+            message: "Invalid credentials",
+            data:err
+        })
+    }
+}
+
+module.exports = { createuser , getAllUser ,getUserById , updateUser , deleteuser , register , login}
