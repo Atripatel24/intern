@@ -7,6 +7,7 @@ import Form from './Component/Form'
 import { createBrowserRouter , RouterProvider} from 'react-router-dom'
 import Layout from './Layout'
 import Table from './Component/Table'
+import Editform from './Component/Editform'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,10 @@ function App() {
         {
           path:'/table',
           element:<Table/>
+        },
+        {
+          path:'/edituser/:id',
+          element:<Editform/>
         }
       ]
     }

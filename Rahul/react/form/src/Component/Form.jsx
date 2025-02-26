@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import './Form.css'
 
 const Form = () => {
 
@@ -46,9 +47,7 @@ const Form = () => {
         <label>password :</label>
         <input type="text" name='password' onChange={userHandler}/> <br /><br />
 
-        <input type="text" name='surname' onChange={userHandler} />
-
-        <button>submit</button>
+        <button className='btn'>submit</button>
 
       </form>
 

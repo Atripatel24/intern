@@ -1,11 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Table = () => {
 
     const [user, setUser] = useState([])
     const [onedata , setOnedata] = useState()
+
+    const navigate = useNavigate()
 
     // npm i axios
     // mockapi
@@ -52,8 +54,9 @@ const Table = () => {
                             <td>{i.name}</td>
                             <td>{i.email}</td>
                             <td>
-                                <button onClick={()=> deleteuser(i.id)}>Delete</button>
+                                <button onClick={()=> deleteuser(i.id)} className='btn'>Delete</button>
                                 <button onClick={()=> getOnedata(i.id)}>view</button>
+                                <button onClick={()=> navigate(`/edituser/${i.id}`)}>Edit</button>
                             </td>
                         </tr>
                     )
