@@ -176,7 +176,7 @@ let loginuser = async(req,res) =>{
         } 
 
         let userwithoutpassword = loginuser.toObject()
-        delete loginuser.password
+        delete userwithoutpassword.password
 
         console.log(userwithoutpassword)
 
@@ -254,14 +254,11 @@ let tokengenerate = async(req,res) =>{
 
 let imageHandler = async(req,res) =>{
     try{
-
-        console.log(req.file)
+        // console.log(req.file)
 
         let {name} = req.body
-
         let {image} = req.file
 
-        
         let newuser = new user({
             name,
            image:req.file.filename
