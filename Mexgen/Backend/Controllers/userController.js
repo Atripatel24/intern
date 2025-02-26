@@ -1,4 +1,5 @@
 let User = require("../Models/userSchema")
+let bcrypt = require("bcryptjs")
 
 let createuser = async(req,res) =>{
     try{
@@ -115,10 +116,12 @@ let register = async(req,res) =>{
         let exist = await User.findOne({email})
         if (exist) throw "user already exist..!"
 
+        let newpassword = await bcrypt.hash(password , 10)
+
         let newuser = new User({
             name,
             email,
-            password
+            password : newpassword
         })
 
         await newuser.save()
@@ -143,15 +146,19 @@ let login = async(req,res) => {
 
         let { email , password } = req.body
 
-        let loginemail = await User.findOne({email})
-        if(!loginemail) throw "Invalid email"
+        let loginuser = await User.findOne({email})
+        if(!loginuser) throw "Invalid email"
 
-        let loginpassword = await User.findOne({password})
+        let loginpassword = await bcrypt.compare(password , loginuser.password)
+            //                                   ( krish123 , $2b$10$3g... )
         if (!loginpassword) throw "Invalid password "
+
+        let userwithoutpassword = loginuser.toObject()
+        delete userwithoutpassword.password
 
         res.send({
             message:"Login success",
-            data: email
+            data: userwithoutpassword
         })
 
     }catch(err){
