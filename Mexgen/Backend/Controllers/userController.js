@@ -169,4 +169,45 @@ let login = async(req,res) => {
     }
 }
 
-module.exports = { createuser , getAllUser ,getUserById , updateUser , deleteuser , register , login}
+
+const loginmiddleware = async(req,res) => {
+    try{
+
+        let { password } = req.body.password
+
+        let loginpassword = await bcrypt.compare(password , loginuser.password)
+            //                                   ( krish123 , $2b$10$3g... )
+        if (!loginpassword) throw "Invalid password "
+
+        let userwithoutpassword = loginuser.toObject()
+        delete userwithoutpassword.password
+
+        res.send({
+            message:"Login success",
+            data: userwithoutpassword
+        })
+
+    }catch(err){
+        res.send({
+            message: "Invalid credentials",
+            data:err
+        })
+    }
+}
+
+let checkeamil = async(req,res,next) => {
+    try{
+
+        let email = req.body.email
+
+         let loginuser = await User.findOne({email})
+        if(!loginuser) throw "Invalid email"
+
+        next()
+
+    }catch(err){
+        res.send(err)
+    }
+}
+
+module.exports = { createuser , getAllUser ,getUserById , updateUser , deleteuser , register , login , loginmiddleware , checkeamil}
