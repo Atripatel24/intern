@@ -280,6 +280,8 @@ let imageHandler = async(req,res) =>{
     }
 }
 
+let { cloudinary } = require("../Middleware/cloudnary")
+
 
 let cloudHandler = async(req,res) =>{
     try{
@@ -288,7 +290,7 @@ let cloudHandler = async(req,res) =>{
 
         let {name} = req.body
 
-        let {image} = req.file
+        let {image} = cloudinary.uploader.upload(req.file.path)
 
         
         // let newuser = new user({
