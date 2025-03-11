@@ -2,12 +2,14 @@ const express = require('express')
 const cors = require('cors')
 const connectionDB = require("./Connection/db")
 const route = require("./Routes/route")
+const product = require("./Routes/productRoute")
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 app.use(route)
+app.use(product)
 
 connectionDB()
 

@@ -210,4 +210,130 @@ let checkeamil = async(req,res,next) => {
     }
 }
 
-module.exports = { createuser , getAllUser ,getUserById , updateUser , deleteuser , register , login , loginmiddleware , checkeamil}
+
+const jwt = require("jsonwebtoken")
+
+let tokengenerate = async(req,res) => {
+
+    try{
+
+        let { email , password } = req.body
+
+        let loginuser = await User.findOne({email})
+        if(!loginuser) throw "Invalid email"
+
+        let loginpassword = await bcrypt.compare(password , loginuser.password)
+        if (!loginpassword) throw "Invalid password "
+
+        if(loginuser && loginpassword){
+
+            let token = jwt.sign({id:loginuser._id},"iamdevloper",{expiresIn:"1m"})
+            res.cookie("token",token, {httpOnly:true})
+            
+            res.send({
+                message:"Login success",
+                token
+            })
+        }
+
+       
+
+    }catch(err){
+        console.log(err)
+        res.send({
+            message: "Invalid credentials",
+            data:err
+        })
+    }
+
+} 
+
+
+let verifytoken = async(req,res,next) => {
+    try{
+        console.log(req.cookies.token)
+        let token = req.cookies.token
+
+        let user_data = jwt.verify(token,"iamdevloper")
+
+        if(!user_data) throw "Invalid token"
+
+        let loginuser = await User.findById(user_data.id)
+
+        req.user = loginuser
+
+        next()
+
+
+    }catch(err){
+        res.send({message:err})
+    }
+}
+
+let userDetail = async(req,res) => {
+    let data = req.user
+
+    res.send({
+        user: data
+    })
+}
+
+
+let imageupload = async(req,res)=>{
+    try{
+        
+        console.log(req.body)
+        console.log(req.file)
+
+        const { name , email , password } = req.body 
+        
+        let newuser = new User({
+            name,
+            email,
+            password,
+            profile : req.file.filename
+        })
+
+        await newuser.save()
+
+        res.send({
+            success:true,
+            message: 'new user create successfully'
+        })
+    }catch(err){
+        res.send({message:err})
+    }
+}
+
+
+let cloudupload = async(req,res)=>{
+    try{
+        
+        // console.log(req.body)
+        // console.log(req.file)
+
+        const { name , email , password } = req.body 
+        console.log(req.body)
+        console.log(req.file)
+        
+        let newuser = new User({
+            name,
+            email,
+            password,
+            profile : req.file.path
+        })
+
+        await newuser.save()
+
+        res.send({
+            success:true,
+            message: 'new user create successfully'
+        })
+    }catch(err){
+        res.send({message:err})
+    }
+}
+
+
+
+module.exports = { createuser , getAllUser ,getUserById , updateUser , deleteuser , register , login , loginmiddleware , checkeamil , tokengenerate , verifytoken , userDetail , imageupload ,cloudupload}

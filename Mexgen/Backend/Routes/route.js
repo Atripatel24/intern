@@ -1,5 +1,5 @@
 const express = require('express')
-const { createuser, getAllUser, getUserById, updateUser, deleteuser, register, login, loginmiddleware, checkeamil } = require('../Controllers/userController')
+const { createuser, getAllUser, getUserById, updateUser, deleteuser, register, login, loginmiddleware, checkeamil, tokengenerate, verifytoken, userDetail, imageupload, cloudupload } = require('../Controllers/userController')
 const router = express.Router()
 
 router.post('/create', createuser)
@@ -28,6 +28,26 @@ router.post('/middleware', (req, res, next) => {
 })
 
 router.post("/loginmiddleware",checkeamil,loginmiddleware)
+
+// token
+
+router.post("/tokengenetare", tokengenerate)
+
+let cookieparser = require('cookie-parser')
+router.use(cookieparser())
+
+router.get('/verifytoken', verifytoken , userDetail)
+
+
+// image 
+
+// const upload = require("../Connection/multer")
+
+// router.post("/imagetest", upload.single('profile') ,imageupload) 
+
+let { upload }= require("../Connection/cloudinary")
+
+router.post("/cloudninary", upload.single("profile") , cloudupload)
 
 
 module.exports = router
