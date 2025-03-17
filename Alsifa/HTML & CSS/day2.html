@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .p1{
+            width: 200px;
+            background-color: rosybrown;
+            height: 100px;
+            overflow-x: auto;
+        }
+
+        .b1{
+            /*
+            border-width: 2px;
+            border-color: red;
+            border-style: solid;
+            */
+            border: 2px dotted blue;
+            border-radius: 10px;
+        }
+
+        .outline{
+            outline-width: 5px;
+            outline-color: lime;
+            outline-style: solid;
+            outline-offset: 2px;
+        }
+
+        .mp{
+            margin: 10px;
+            margin: 10px 20px;
+            margin-left: 30px;
+
+            padding: 5px;
+            padding-right: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="p1" >
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe aliquid ipsum, tenetur quibusdam beatae libero vitae veniam temporibus sit molestiae. Ratione error esse reprehenderit nemo aperiam reiciendis rem pariatur explicabo?</p>
+    </div>
+
+    <p class="b1">Lorem ipsum dolor sit amet.</p>
+
+    <p class="b1 outline">Lorem ipsum dolor sit amet.</p>
+
+    <button class="mp">click</button>
+
+    <div style="border: 1px solid red;padding-left: 10px;">
+        <div >Lorem, ipsum dolor.</div>
+    </div>
+
+    <table style="border-collapse:collapse; ">
+        <tr style="border-bottom: 1px solid black;">
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <ul style="list-style:lower-roman;">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <div style="font-family:sans-serif;font-size: 20px;font-weight: bold;font-style: italic;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio incidunt ratione adipisci dolore. Nisi, placeat inventore.</p>
+    </div>
+
+    <i class="fa-brands fa-github" style="font-size: large;"></i>
+    <i class="fa-regular fa-circle-user"></i>
+
+    <p style="display: inline;">Lorem, ipsum.</p>
+    <button style="display: block;">btn 1</button>
+    <button>btn 2</button>
+
+    <div >
+        <div style="background-color: brown;width:100px;float:left">1</div>
+        <div style="background-color: brown;width:100px;float:left;margin-left:30px">2</div>
+        <div style="background-color: brown;width:100px;float:right">3</div>
+    </div>
+
+</body>
+</html>

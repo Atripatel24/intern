@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        li{
+            display: inline;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        @media (max-width:400px){
+            li{
+                display: block;
+            }
+        }
+
+        @media (min-width: 401px) and (max-width: 800px) {
+            ul{
+                background-color: lightblue;  
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>cart</li>
+        <li>contact</li>
+    </ul>
+</body>
+</html>

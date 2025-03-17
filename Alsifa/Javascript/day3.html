@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cl1{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="p1"></p>
+    <h1 class="c1"></h1>
+    <h1 class="c1"></h1>
+    <h1 class="c1"></h1>
+    <h1 class="c1"></h1>
+
+    <p></p>
+
+    <button onclick="cli()">click</button>
+    <button ondblclick="cli()">click</button>
+
+    <input type="text" onchange="cli()">
+
+    <p onmouseenter="cli()">mouse</p>
+
+    <p id="q1"></p>
+
+    <button class="b1">add</button>
+
+</body>
+<script>
+    document.getElementById("p1").innerHTML = "<h1>innertext</h1>"
+    document.getElementsByClassName("c1")[2].innerHTML = "get by classname"
+    document.getElementsByTagName("p")[1].innerHTML = "get by tag name"
+
+    document.getElementById("p1").style.color = "red"
+
+    document.getElementById("p1").classList.add("cl1")
+
+    document.getElementById("q1").innerText="<h1>innertext</h1>"
+
+    document.getElementsByClassName("b1")[0].addEventListener("click",function a1(){
+        alert("event")
+    })
+
+    function cli(){
+        alert("click button")
+    }
+</script>
+</html>

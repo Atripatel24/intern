@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1:hover{
+            color: red;
+            font-size: larger;
+        }
+
+        .p2 i:first-child {
+            color: blue;
+        }
+
+        a:visited{
+            color: green;
+        }
+        a:hover{
+            color: red;
+        }
+
+        .p3::first-letter{
+            color: chocolate;
+            font-size: larger;
+        }
+
+        .p3::first-line{
+            color: blue;
+        }
+
+        input::placeholder{
+            color: blueviolet;
+        }
+
+        li::marker{
+            color: crimson;
+        }
+
+        p::selection{
+            background-color: black;
+            color: white;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            box-shadow: 5px 5px 5px brown;
+        }
+
+        .text{
+            font-size: x-large;
+            text-shadow: 1px -2px  blue;
+        }
+
+        li::before{
+            content: "hello ";
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p class="p1">Lorem ipsum dolor sit amet.</p>
+
+    <p class="p2">Lorem ipsum dolor <i>sit</i> amet consectetur <i>second</i> adipisicing.</p>
+
+    <a href="#">link</a>
+
+    <p class="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti facere adipisci nemo quidem nihil nesciunt impedit iste, voluptas rem mollitia.</p>
+
+    <input type="text" placeholder="enter">
+
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+    <div class="box"></div>
+
+    <p class="text">test</p>
+
+    <div style="background-image: url(./uwp3574478.png); width: 200px;height:100px">
+        hvv
+    </div>
+
+</body>
+</html>

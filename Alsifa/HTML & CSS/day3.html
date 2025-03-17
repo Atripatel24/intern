@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .maindiv{
+            background-color: sandybrown;
+            display: flex;
+            /*
+            align-items:baseline ;
+            justify-content: space-evenly;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-direction: row-reverse;
+            */
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+
+        .maindiv div{
+            width: 50px;
+            background-color: lightcyan;
+        }
+
+
+        li{
+            display: inline;
+            margin-right: 10px;
+        }
+
+        ul{
+            list-style-type: none;
+            margin: 1px;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="maindiv">
+        <div style="margin-left: 10px;">sub 1</div>
+        <div>sub 2</div>
+        <div>sub 3</div>
+        <!-- <div>sub 4</div> -->
+        <div style="margin-right: 10px;">sub 5</div>
+        <!-- <div>sub 5</div>
+        <div>sub 5</div>
+        <div>sub 5</div>
+        <div>sub 5</div> -->
+    </div>
+
+
+    <div style="display: flex;justify-content: space-between;">
+        <div>
+            <ul style="width: 200px;">
+                <li>home</li>
+                <li>shop</li>
+                <li>shop</li>
+                <li>shop</li>
+                <li>shop</li> 
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>login</li>
+                <li>register</li>
+            </ul>
+        </div>
+    </div>
+
+   <div style="border: 1px solid red; height:200px ;position: relative;">
+        <div style="width: 20px; background-color:cadetblue ; position:absolute; bottom:30px">div</div>
+   </div>
+   <br>
+
+   <div style="background-color: brown;color:white ; position:sticky; top:0px">lorem</div>
+
+   <div style="position: fixed; bottom:20px;right:10px">position fix</div>
+
+   <!-- <div style="margin-top: 500px;">cwdvw</div> -->
+
+   <br>
+
+   <div>
+    <img src="./uwp3574478.png" alt="" style="width: 300px;z-index: -1;position: absolute;">
+    <p style="color:blanchedalmond;padding:10px">above image</p>
+   </div>
+
+
+
+
+</body>
+</html>
