@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div1{
+            width: 150px;
+            height: 200px;
+            background-color: cadetblue;
+
+            overflow: auto;
+            overflow-x: scroll;
+        }
+
+        .out{
+            border: 1px solid red;
+            width: 200px;
+            /*
+            outline-width: 2px;
+            outline-color: blue;
+            outline-style: dashed;
+            */
+            outline-offset: 9px;
+            outline: 1px solid blue;
+        }
+
+        .fix{
+            position:fixed;
+            width: 150px;
+            text-align: center;
+            background-color: chocolate;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .sticky{
+            text-align: center;
+            background-color:darkkhaki;
+            position: sticky;
+            top: 20px;
+        }
+
+        .maindiv{
+            width: 200px;
+            height: 200px;
+            border: 1px solid ;
+            position: relative;
+        }
+
+        .subdiv{
+            width: 70px;
+            height: 30px;
+            background-color: coral;
+            position: absolute;
+            bottom: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="div1">
+        <p style="width: 250px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam optio soluta, vero inventore nostrum reiciendis tempore aliquam totam, voluptate accusantium praesentium hic voluptates quibusdam reprehenderit, veritatis itaque harum. Repudiandae quasi neque expedita recusandae nisi numquam labore esse, voluptates beatae asperiores.</p>
+    </div>
+
+    <p class="out">Outline</p>
+
+    <div class="fix">fix positions</div>
+
+    <div class="sticky">positions sticky</div>
+
+    <div class="maindiv">
+        <div class="subdiv">absolute</div>
+    </div>
+    
+    <div>
+        <img src="./uwp3574478.png" alt="" style="width: 300px;height:300px ; z-index:-1;position:absolute" >
+        <p style="color: white;font-size:larger">above image</p>
+    </div>
+
+    
+    <div style="margin-top: 1000px;">1</div>
+</body>
+</html>

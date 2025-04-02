@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main > p{
+            color: red;
+            padding: 10px ;
+        }
+
+        .btn:hover {
+            font-size: larger;
+            cursor: pointer;
+        }
+        .p1 i:first-child {
+            color: brown;
+        }
+
+        .ele::first-line{
+            color: blueviolet;
+        }
+        .ele::first-letter{
+            font-size: x-large;
+        }
+        .ele::after{
+            content: "hello";
+        }
+        .ele::before{
+            content: "hello";
+        }
+
+        li::marker{
+            color: aquamarine;
+            font-size: x-large;
+        }
+
+        input::placeholder{
+            color:green;
+            padding: 10px;
+        }
+
+        .option{
+            display: none;
+        }
+
+        .drop:hover .option{
+            display: block;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: cadetblue;
+
+            box-shadow: 5px 5px 5px black;
+        }
+
+        .flexdiv{
+            display: flex;
+            /*
+            justify-content:space-around ;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            */
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;    
+        }
+        .flexdiv > div{
+            width: 100px;
+            height: 20px;
+            background-color: chocolate;
+            text-align: center;
+        }
+
+        .linear{
+            background-image: linear-gradient( to right bottom,red 20%,green,blue,yellow,pink,brown);
+            width: 300px;
+            height: 300px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="main">
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+
+    <button class="btn">click</button>
+
+    <p class="p1">Lorem ipsum, dolor <i>some</i> sit amet <i>second</i> consectetur adipisicing.</p>
+
+    <p class="ele">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ex facilis totam animi a, molestiae enim itaque corrupti illum distinctio?</p>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <input type="text" placeholder="enter something">
+
+    <div class="drop">
+        dropdown
+        <div class="option">
+            <!-- <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul> -->
+            options
+        </div>
+    </div>
+
+    <p style="text-shadow: 2px -2px 2px red;">text</p>
+
+    <div class="box"></div>
+
+    <div class="flexdiv">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div style="height: 100px;">5</div>
+        <div>5</div>
+        <div>5</div>
+        <div>5</div>
+        <div>5</div>
+        <div>5</div>
+    </div>
+
+    <div class="linear">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main{
+            width: 150px;
+            height: 100px;
+            background-color: chocolate;
+            position: absolute;
+            margin: 100px;
+            transition: 3s;
+        }
+
+        .main:hover{
+            /*
+            transform: translate(100px,100px);
+            transform: translateY(50px);
+            transform: rotate(270deg);
+            transform: scale(0.5,2);
+            transform: scaleY(5);
+            transform: skew(0deg,180deg);
+            transform: skewX(90deg);
+
+            scaleX, skewY, skewX,scaleY, translateX, translateY
+            */
+            transform: matrix(2,20,0,1,50,50);
+        }
+
+        /* Animations */
+        .anime{
+            width: 150px;
+            height: 100px;
+            background-color: chocolate;
+            position: absolute;
+            animation-name: animation1;
+            animation-duration: 8s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes animation1{
+            0%{
+                background-color: chocolate;
+                left:0px;
+                top:0px;
+            }
+            25%{
+                background-color: red;
+                left: 200px;
+                top:0px;
+            }
+            50%{
+                background-color: green;
+                left:200px;
+                top:100px;
+            }
+            75%{
+                background-color: yellow;
+                left:0px;
+                top:200px;
+            }
+            100%{
+                background-color: chocolate;
+                left:0px;
+                top:0px;
+            }
+        }
+
+        /* Responsive */
+
+        ul{
+            list-style: none;
+            font-size: xx-large;
+            background-color: darkgrey;
+        }
+        li{
+            display: inline;
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width:768px) and (min-width:375px){
+            ul{
+                background-color: lightblue;
+            }
+            li{
+                display: block;
+            }
+        }
+
+        @media screen and (max-width:375px){
+            ul{
+                background-color: lightgreen;
+            }
+            li{
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <div class="main"></div> -->
+
+    <!-- <div class="anime"></div> -->
+
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Messages</li>
+    </ul>
+
+</body>
+</html>
