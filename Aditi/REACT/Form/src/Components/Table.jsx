@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
+import { useNavigate } from 'react-router-dom'
 
 const Table = () => {
 
@@ -12,6 +13,8 @@ const Table = () => {
 
   const [users, setUsers] = useState([])
   const [oneuser, setOneusers] = useState([])
+
+  let navigate = useNavigate()
 
   let getdata = async () => {
     let res = await axios.get('https://67b473d5392f4aa94faae9e4.mockapi.io/users')
@@ -28,6 +31,7 @@ const Table = () => {
 
   let deleteuser = async (id) =>{
     let res = await axios.delete(`https://67b473d5392f4aa94faae9e4.mockapi.io/users/${id}`)
+    // let res = await axios.delete(`http://localhost:5000/delete/${id}`)
     getdata()
   }
 
@@ -54,7 +58,8 @@ const Table = () => {
                 <td>{i.email}</td>
                 <td>
                   <button onClick={()=> onedata(i.id)}>View</button> &nbsp;&nbsp;
-                  <button onClick={()=> deleteuser(i.id)}>Delete</button>
+                  <button onClick={()=> deleteuser(i.id)}>Delete</button>&nbsp;&nbsp;
+                  <button onClick={()=> navigate(`/editform/${i.id}`)}>Edit</button>
                 </td>
             </tr>
           )
